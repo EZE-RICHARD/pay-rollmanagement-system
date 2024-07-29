@@ -8,35 +8,36 @@
     display: grid;
     grid:
       "sidebar body" 1fr
-      / 20% 1fr;
+      / 23% 1fr;
     gap: 8px;
   }
 
-  .menu {
+  .side_menu {
     grid-area: sidebar;
     position: relative;
-    background-color: brown;
     padding: 1rem 1rem 2rem;
     @include laptop{
         padding: 0;
     }
-    aside {
+    .aside {
         width: 80%;
         height: 95vh;
         border-radius: $border-rad;
         padding: 1rem;
         background-color:#fff;
         position: absolute;
+        transition: transform 0.3s ease-in-out;
         @include laptop{
             height: 100%;
-            width: 20%;
+            width: 23%;
             position: fixed;
             background-color: $pale_blue;
+            
             border-radius: 0;
         }
         .brand{
             padding: 1rem 0 1rem;
-            border-bottom: 2px solid red;
+            border-bottom: 1px solid $blue;
         }
         .nav_menu{
             display: flex;
@@ -45,16 +46,12 @@
             height: 70vh;
  
         }
-        .log_btn{
-            width: 100%;
-            background-color: cornflowerblue;
-            position: absolute;
-            bottom: 2rem;
-            a{
-                width: 10rem;
-                background-color: red;
-            }
+        .foot{
+          position: absolute;
+          bottom: 1rem;
+          width: 100%;
         }
+ 
     }
   }
   
@@ -64,7 +61,36 @@
 }
 
 .active_nav{
+  @include laptop{
+    background-color: #fff;
+  }
     i{
         @include gradient;
     }
+}
+
+.log_btn{
+  width: 85%;
+  justify-content: center;
+  @include gradient;
+  display: flex;
+}
+
+.toggle_side{
+  transform: translateX(-50rem);
+  @include laptop{
+    transform: translateX(0);
+  }
+}
+
+.toggle_btn{
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  bottom: 5rem;
+  right: 2rem;
+  @include gradient;
+  @include laptop{
+    display: none;
+  }
 }

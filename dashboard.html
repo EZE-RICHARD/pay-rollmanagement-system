@@ -18,12 +18,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./dist/styles/main.css" />
+    <script src="./dist/script/script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <div class="dash_Box">
-      <section class="menu">
-        <aside class="">
+      <i class="fa-solid fa-list toggle_btn text-white p-3 h3 shadow"></i>
+
+      <!-- side menu -->
+      <section class="side_menu ">
+        <div class="aside shadow toggle_side">
           <header class="brand h3">EasyPay</header>
           <nav class="nav_menu mt-4">
             <a
@@ -53,28 +57,61 @@
               ><i class="fa-solid fa-right-to-bracket p-2 text-dark rounded shadow"></i>Sign in</a
             >
           </nav>
-          <footer class="log_btn">
-            <a href="javascript:void(0)" class="text-decoration-none text-white text-center jaja"
-              >Log out</a
-            >
-          </footer>
-        </aside>
+         <footer class="foot ">
+          <a href="" class="btn log_btn text-decoration-none text-white">Log out</a>
+         </footer>
+        </div>
       </section>
 
-      <section class="main">
+      <!-- main section -->
+      <section class="main p-4">
         <main>
-          <header>
-            <a href="javascript:void(0)">/Dashboard</a>
-            <div>
+          <header class="head_nav d-md-flex justify-content-between align-items-center">
+            <a href="javascript:void(0)" class="text-decoration-none text-dark">/ Dashboard</a>
+            <div class="d-flex align-items-center gap-3">
               <input
                 type="search"
                 name="search"
                 id="dearch"
                 placeholder="Search"
+                class="form-control"
               />
-              <i class="fa-solid fa-user"></i>
+              <a href="" class="text-decoration-none text-dark"><i class="fa-solid fa-user"></i></a>
             </div>
           </header>
+          
+          <section class="summary_info">
+
+            <div class="info">
+              <span>
+                <p>Number of employees</p>
+                <p>9<span>k</span></p>
+              </span>
+              <i class="fa-solid fa-helmet-safety"></i>
+            </div>
+
+            <div class="info">
+
+              <span>
+                <p>Roles assigned</p>
+                <p>56</p>
+              </span>
+              <i class="fa-solid fa-briefcase"></i>
+
+            </div>
+
+            <div class="info">
+
+              <span>
+                <p>Departments</p>
+                <p>15</p>
+              </span>
+              <i class="fa-solid fa-building-user"></i>
+
+            </div>
+
+          </section>
+
         </main>
       </section>
     </div>
