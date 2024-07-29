@@ -168,8 +168,8 @@ body {
   position: absolute;
   bottom: 2rem;
 }
-.dash_Box .menu aside .log_btn .jaja {
-  width: 100%;
+.dash_Box .menu aside .log_btn a {
+  width: 10rem;
   background-color: red;
 }
 .dash_Box .main {
