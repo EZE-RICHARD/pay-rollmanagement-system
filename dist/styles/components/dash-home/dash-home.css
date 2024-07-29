@@ -74,12 +74,26 @@ body {
 .dash_Box .main .data_section .chart {
   width: 100%;
 }
-@media (min-width: 850px) {
-  .dash_Box .main .data_section .chart {
-    width: 50%;
-  }
+.dash_Box .main .data_section .transacrion_history {
+  width: 100%;
+}
+.dash_Box .main .data_section .transacrion_history .histories .transaction span img {
+  width: 50px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.dash_Box .main .data_section .transacrion_history .histories .transaction .employee_name {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.active_nav {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
 @media (min-width: 850px) {
   .active_nav {
     background-color: #fff;
@@ -117,4 +131,13 @@ body {
   .toggle_btn {
     display: none;
   }
+}
+
+.menu_item:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+.menu_item:hover i {
+  background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
+  color: white !important;
 }/*# sourceMappingURL=dash-home.css.map */

@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./dist/styles/main.css" />
-    <script src="./dist/script/script.js" defer></script>
+    <script src="./dist/script/script.js" defer ></script>
     <title>Document</title>
   </head>
   <body>
@@ -32,32 +32,32 @@
           <nav class="nav_menu mt-4">
             <a
               href="javascript:void(0) "
-              class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded active_nav shadow"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded active_nav"
               ><i class="fa-solid fa-house p-2 text-white rounded shadow"></i
               >Dashboard</a
             >
             <a
               href="javascript:void(0)"
-              class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              class="menu_item  text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
               ><i class="fa-solid fa-briefcase p-2 text-dark rounded shadow"></i
               >Employees</a
             >
             <a
               href="javascript:void(0)"
-              class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
               ><i class="fa-solid fa-receipt p-2 text-dark rounded shadow"></i
               >Pay-roll</a
             >
             <span>Accounts</span>
             <a
               href="javscript:void(0)"
-              class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
               ><i class="fa-solid fa-user p-2 text-dark rounded shadow"></i
               >Profile</a
             >
             <a
               href="javscript:void(0)"
-              class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
               ><i
                 class="fa-solid fa-right-to-bracket p-2 text-dark rounded shadow"
               ></i
@@ -73,7 +73,7 @@
       </section>
 
       <!-- main section -->
-      <section class="main p-4">
+      <section class="main p-3 p-md-4">
         <main>
           <header
             class="head_nav d-md-flex justify-content-between align-items-center"
@@ -127,16 +127,104 @@
             </div>
           </section>
 
-          <section class="data_section mt-5">
-
-            <div class="chart bg-white p-3 rounded">
+          <section
+            class="data_section mt-5 d-lg-flex justify-content-between gap-4"
+          >
+            <!-- chart -->
+            <div class="chart bg-white p-3 rounded mx-auto">
               <canvas id="myChart"></canvas>
             </div>
-            <div class="transacrion_history">
-              
-            </div>
 
+            <!-- transaction histories log-->
+            <div class="transacrion_history bg-white rounded p-3 mt-4 mt-lg-0">
+
+              <header class="d-flex justify-content-between">
+                <p>Transaction history</p>
+                <a href="">See all</a>
+              </header>
+
+              <div class="histories">
+                <!-- transaction history  -->
+                <div class="transaction d-flex justify-content-between p-2">
+                  <span class="d-flex gap-2">
+                    <figure>
+                      <img src="./dist/images/many.jpg" alt="" />
+                    </figure>
+                    <div class="employee_info d-flex flex-column">
+                      <span class="employee_name fw-bold">Idogwo Austin</span>
+                      <span>Intern</span>
+                    </div>
+                  </span>
+
+                  <div class="amount d-flex flex-column">
+                    <span>&#8358;5000</span>
+                    <span>2/02/24</span>
+                  </div>
+                </div>
+
+                <!-- transaction history  -->
+                <div class="transaction d-flex justify-content-between p-2">
+                  <span class="d-flex gap-2">
+                    <figure>
+                      <img src="./dist/images/many.jpg" alt="" />
+                    </figure>
+                    <div class="employee_info d-flex flex-column">
+                      <span class="employee_name fw-bold">karim benjo</span>
+                      <span>Intern</span>
+                    </div>
+                  </span>
+
+                  <div class="amount d-flex flex-column">
+                    <span>&#8358;5000</span>
+                    <span>2/02/24</span>
+                  </div>
+                </div>
+
+                <!-- transaction history  -->
+                <div class="transaction d-flex justify-content-between p-2">
+                  <span class="d-flex gap-2">
+                    <figure>
+                      <img src="./dist/images/many.jpg" alt="" />
+                    </figure>
+                    <div class="employee_info d-flex flex-column">
+                      <span class="employee_name fw-bold"
+                        >Festus Okoronkwo</span
+                      >
+                      <span>Intern</span>
+                    </div>
+                  </span>
+
+                  <div class="amount d-flex flex-column">
+                    <span>&#8358;5000</span>
+                    <span>2/02/24</span>
+                  </div>
+                </div>
+
+                <!-- transaction history  -->
+                <div class="transaction d-flex justify-content-between p-2">
+                  <span class="d-flex gap-2">
+                    <figure>
+                      <img src="./dist/images/many.jpg" alt="" />
+                    </figure>
+                    <div class="employee_info d-flex flex-column">
+                      <span class="employee_name fw-bold"
+                        >Festus Okoronkwo</span
+                      >
+                      <span>Intern</span>
+                    </div>
+                  </span>
+
+                  <div class="amount d-flex flex-column">
+                    <span>&#8358;5000</span>
+                    <span>2/02/24</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
           </section>
+
         </main>
       </section>
     </div>
