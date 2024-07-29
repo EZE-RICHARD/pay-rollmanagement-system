@@ -1,0 +1,44 @@
+// @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+$medium: 520px; //tablet
+$large: 850px; //laptop
+$xlarge: 1200px; //desktop
+$blue:#2768ab;
+$pale_blue:#F8F9FA;
+$border-rad:0.5rem;
+
+
+@mixin tablet{
+    @media (min-width: $medium) {
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin dessktop{
+    @media (min-width: $xlarge) {
+        @content;
+    }
+}
+
+@mixin gradient{
+    background-image: linear-gradient(
+        to right top,
+        #000000,
+        #020509,
+        #06111b,
+        #0b1d2f,
+        #2768ab
+      );
+}
+
+body{
+    // font-family: "Kanit", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
+    // font-optical-sizing: auto;
+}
