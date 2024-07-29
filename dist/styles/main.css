@@ -114,7 +114,8 @@ body {
 }
 .dash_Box {
   width: 100%;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #F8F9FA;
 }
 @media (min-width: 850px) {
@@ -140,14 +141,13 @@ body {
   border-radius: 0.5rem;
   padding: 1rem;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   transition: transform 0.3s ease-in-out;
 }
 @media (min-width: 850px) {
   .dash_Box .side_menu .aside {
     height: 100%;
     width: 23%;
-    position: fixed;
     background-color: #F8F9FA;
     border-radius: 0;
   }
@@ -169,6 +169,24 @@ body {
 }
 .dash_Box .main {
   grid-area: body;
+}
+@media (min-width: 520px) {
+  .dash_Box .main .summary_info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+}
+.dash_Box .main .summary_info .informations i {
+  background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
+}
+.dash_Box .main .data_section .chart {
+  width: 100%;
+}
+@media (min-width: 850px) {
+  .dash_Box .main .data_section .chart {
+    width: 50%;
+  }
 }
 
 @media (min-width: 850px) {
@@ -198,7 +216,7 @@ body {
 
 .toggle_btn {
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   z-index: 5;
   bottom: 5rem;
   right: 2rem;

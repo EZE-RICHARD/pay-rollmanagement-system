@@ -26,48 +26,61 @@
       <i class="fa-solid fa-list toggle_btn text-white p-3 h3 shadow"></i>
 
       <!-- side menu -->
-      <section class="side_menu ">
+      <section class="side_menu">
         <div class="aside shadow toggle_side">
           <header class="brand h3">EasyPay</header>
           <nav class="nav_menu mt-4">
             <a
               href="javascript:void(0) "
               class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded active_nav shadow"
-              ><i class="fa-solid fa-house p-2 text-white rounded shadow"></i>Dashboard</a
+              ><i class="fa-solid fa-house p-2 text-white rounded shadow"></i
+              >Dashboard</a
             >
             <a
               href="javascript:void(0)"
               class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
-              ><i class="fa-solid fa-briefcase p-2 text-dark rounded shadow"></i>Employees</a
+              ><i class="fa-solid fa-briefcase p-2 text-dark rounded shadow"></i
+              >Employees</a
             >
             <a
               href="javascript:void(0)"
               class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
-              ><i class="fa-solid fa-receipt p-2 text-dark rounded shadow"></i>Pay-roll</a
+              ><i class="fa-solid fa-receipt p-2 text-dark rounded shadow"></i
+              >Pay-roll</a
             >
             <span>Accounts</span>
             <a
               href="javscript:void(0)"
               class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
-              ><i class="fa-solid fa-user p-2 text-dark rounded shadow"></i>Profile</a
+              ><i class="fa-solid fa-user p-2 text-dark rounded shadow"></i
+              >Profile</a
             >
             <a
               href="javscript:void(0)"
               class="text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
-              ><i class="fa-solid fa-right-to-bracket p-2 text-dark rounded shadow"></i>Sign in</a
+              ><i
+                class="fa-solid fa-right-to-bracket p-2 text-dark rounded shadow"
+              ></i
+              >Sign in</a
             >
           </nav>
-         <footer class="foot ">
-          <a href="" class="btn log_btn text-decoration-none text-white">Log out</a>
-         </footer>
+          <footer class="foot">
+            <a href="" class="btn log_btn text-decoration-none text-white"
+              >Log out</a
+            >
+          </footer>
         </div>
       </section>
 
       <!-- main section -->
       <section class="main p-4">
         <main>
-          <header class="head_nav d-md-flex justify-content-between align-items-center">
-            <a href="javascript:void(0)" class="text-decoration-none text-dark">/ Dashboard</a>
+          <header
+            class="head_nav d-md-flex justify-content-between align-items-center"
+          >
+            <a href="javascript:void(0)" class="text-decoration-none text-dark"
+              >/ Dashboard</a
+            >
             <div class="d-flex align-items-center gap-3">
               <input
                 type="search"
@@ -76,44 +89,81 @@
                 placeholder="Search"
                 class="form-control"
               />
-              <a href="" class="text-decoration-none text-dark"><i class="fa-solid fa-user"></i></a>
+              <a href="" class="text-decoration-none text-dark"
+                ><i class="fa-solid fa-user"></i
+              ></a>
             </div>
           </header>
-          
-          <section class="summary_info">
 
-            <div class="info">
-              <span>
+          <section class="summary_info mt-4">
+            <div
+              class="informations d-flex justify-content-between align-items-center rounded shadow bg-white p-2 mt-4 mt-md-0"
+            >
+              <span class="d-flex flex-column info">
                 <p>Number of employees</p>
-                <p>9<span>k</span></p>
+                <p class="h4">9<span>k</span></p>
               </span>
-              <i class="fa-solid fa-helmet-safety"></i>
+              <i class="fa-solid fa-helmet-safety p-3 rounded text-white"></i>
             </div>
 
-            <div class="info">
-
-              <span>
+            <div
+              class="info d-flex justify-content-between align-items-center informations rounded shadow bg-white p-2 mt-4 mt-md-0"
+            >
+              <span class="d-flex flex-column info">
                 <p>Roles assigned</p>
-                <p>56</p>
+                <p class="h4">56</p>
               </span>
-              <i class="fa-solid fa-briefcase"></i>
-
+              <i class="fa-solid fa-briefcase p-3 rounded text-white"></i>
             </div>
 
-            <div class="info">
-
-              <span>
+            <div
+              class="info d-flex justify-content-between align-items-center informations rounded shadow bg-white p-2 mt-4 mt-md-0"
+            >
+              <span class="d-flex flex-column info">
                 <p>Departments</p>
-                <p>15</p>
+                <p class="h4">15</p>
               </span>
-              <i class="fa-solid fa-building-user"></i>
+              <i class="fa-solid fa-building-user p-3 rounded text-white"></i>
+            </div>
+          </section>
 
+          <section class="data_section mt-5">
+
+            <div class="chart bg-white p-3 rounded">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="transacrion_history">
+              
             </div>
 
           </section>
-
         </main>
       </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Red", "Blue", "Yellow"],
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [300, 50, 100],
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
+              ],
+              hoverOffset: 4,
+            },
+          ],
+        },
+      });
+    </script>
   </body>
 </html>
