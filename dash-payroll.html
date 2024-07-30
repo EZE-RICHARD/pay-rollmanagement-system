@@ -41,17 +41,15 @@
               >Dashboard</a
             >
             <a
-              href="javascript:void(0)"
-              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded active_nav"
-              ><i
-                class="fa-solid fa-briefcase p-2 text-white rounded shadow"
-              ></i
+              href="./dash-employee.html"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              ><i class="fa-solid fa-briefcase p-2 text-dark rounded shadow"></i
               >Employees</a
             >
             <a
               href="./dash-payroll.html"
-              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
-              ><i class="fa-solid fa-receipt p-2 text-dark rounded shadow"></i
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded active_nav"
+              ><i class="fa-solid fa-receipt p-2 text-white rounded shadow"></i
               >Pay-roll</a
             >
             <span>Accounts</span>
@@ -79,13 +77,13 @@
       </section>
 
       <!-- main section -->
-      <section class="main p-3 p-md-4">
+      <section class="main p-3 p-md-4 shadow">
         <main>
           <header
             class="head_nav d-md-flex justify-content-between align-items-center"
           >
             <a href="javascript:void(0)" class="text-decoration-none text-dark"
-              >/ Dashboard</a
+              >/ Pay-roll</a
             >
             <div class="d-flex align-items-center gap-3">
               <input
@@ -104,226 +102,95 @@
           <!-- data table here -->
           <section class="data_table bg-white p-3 rounded mt-5">
             <!-- add to payroll -->
-            <div class="add_opt">
-              <button class="btn add_btn text-white">
-                <i class="fa-solid fa-plus"></i> Add to Pay-roll
-              </button>
+            <div class="add_opt mt-4">
+              <label for="monthly_filter">Filter by:</label>
+              <select name="monthly_filter" id="monthly_filter" class="p-2">
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
             </div>
 
-            <div class="table_dsp mt-5 table-responsive">
+            <div class="table_dsp mt-3 table-responsive">
               <table id="example" class="display" style="width: 100%">
                 <thead>
                   <tr>
-                    <th><input type="checkbox" class="select_all"></th>
+                    <th><input type="checkbox" class="select_all" /></th>
                     <th>Name</th>
                     <th>Position</th>
                     <th>Department</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Age</th>
-                    <th>Start date</th>
+                    <th>Payment due date</th>
                     <th>Salary</th>
-                    <th>Actions</th>
+                    <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><input type="checkbox" class="select_employee"/></td>
+                    <td><input type="checkbox" class="select_employee" /></td>
                     <td>Tiger Nixon</td>
                     <td>System Architect</td>
                     <td>Dev</td>
-                    <td>0901 449 4146</td>
-                    <td>Edinburgh@gmail.com</td>
-                    <td>61</td>
                     <td>2011-04-25</td>
                     <td>&#8358;320,800</td>
-                    <!-- actions button -->
-                    <td class="dropdown">
-                      <span
-                        class="btn atn-btn dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      ></span>
-                      <div
-                        class="dropdown-menu p-2"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <button
-                          type="button"
-                          class="btn btn-primary w-100"
-                          data-toggle="modal"
-                          data-target="#exampleModalCenter"
+                    <!-- status button -->
+                    <td>
+                      <select name="status" id="status" class="p-1">
+                        <option value="paid" title="Successful">Paid</option>
+                        <option
+                          value="pending"
+                          title="Payment not processed yet"
                         >
-                          Edit
-                        </button>
-                        <br />
-                        <button type="button" class="btn btn-danger w-100 mt-2">
-                          Delete
-                        </button>
-                      </div>
+                          Pending
+                        </option>
+                        <option
+                          value="in_progress"
+                          title="Payment is currently being processed"
+                        >
+                          In Progress
+                        </option>
+                        <option value="failed" title="Payment attempt failed">
+                          Failed
+                        </option>
+                      </select>
                     </td>
                   </tr>
 
                   <tr>
-                    <td><input type="checkbox" class="select_employee"/></td>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Accounts</td>
-                    <td>0801 3446 4390</td>
-                    <td>Edinburgh@gmail.com</td>
-                    <td>63</td>
-                    <td>2011-07-25</td>
-                    <td>&#8358;170,750</td>
-                    <!-- actions button -->
-                    <td class="dropdown">
-                      <span
-                        class="btn atn-btn dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      ></span>
-                      <div
-                        class="dropdown-menu p-2"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <button
-                          type="button"
-                          class="btn btn-primary w-100"
-                          data-toggle="modal"
-                          data-target="#exampleModalCenter"
-                        >
-                          Edit
-                        </button>
-                        <br />
-                        <button type="button" class="btn btn-danger w-100 mt-2">
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="select_employee"/></td>
-                    <td>Ashton Cox</td>
-                    <td>Junior Technical Author</td>
+                    <td><input type="checkbox" class="select_employee" /></td>
+                    <td>Peter Akpu</td>
+                    <td>System designer</td>
                     <td>Dev</td>
-                    <td>0708 3746 5630</td>
-                    <td>SanFrancisco@gmail.com</td>
-                    <td>66</td>
-                    <td>2009-01-12</td>
-                    <td>&#8358;86,000</td>
-                    <!-- actions button -->
-                    <td class="dropdown">
-                      <span
-                        class="btn atn-btn dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      ></span>
-                      <div
-                        class="dropdown-menu p-2"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <button
-                          type="button"
-                          class="btn btn-primary w-100"
-                          data-toggle="modal"
-                          data-target="#exampleModalCenter"
+                    <td>2011-04-25</td>
+                    <td>&#8358;545,800</td>
+                    <!-- status button -->
+                    <td>
+                      <select name="status" id="status" class="p-1">
+                        <option value="paid" title="Successful">Paid</option>
+                        <option
+                          value="pending"
+                          title="Payment not processed yet"
                         >
-                          Edit
-                        </button>
-                        <br />
-                        <button type="button" class="btn btn-danger w-100 mt-2">
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="select_employee"/></td>
-                    <td>Cedric Kelly</td>
-                    <td>Senior Javascript Developer</td>
-                    <td>Dev</td>
-                    <td>0909 845 2332</td>
-                    <td>Edinburgh@gmail.com</td>
-                    <td>22</td>
-                    <td>2012-03-29</td>
-                    <td>&#8358;433,060</td>
-                    <!-- actions button -->
-                    <td class="dropdown">
-                      <span
-                        class="btn atn-btn dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      ></span>
-                      <div
-                        class="dropdown-menu p-2"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <button
-                          type="button"
-                          class="btn btn-primary w-100"
-                          data-toggle="modal"
-                          data-target="#exampleModalCenter"
+                          Pending
+                        </option>
+                        <option
+                          value="in_progress"
+                          title="Payment is currently being processed"
                         >
-                          Edit
-                        </button>
-                        <br />
-                        <button type="button" class="btn btn-danger w-100 mt-2">
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><input type="checkbox" class="select_employee"/></td>
-                    <td>Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Accounts</td>
-                    <td>0909 845 2332</td>
-                    <td>Edinburgh@gmail.com</td>
-                    <td>23</td>
-                    <td>2008-11-28</td>
-                    <td>&#8358;162,700</td>
-                    <!-- actions button -->
-                    <td class="dropdown">
-                      <span
-                        class="btn atn-btn dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      ></span>
-                      <div
-                        class="dropdown-menu p-2"
-                        aria-labelledby="dropdownMenuButton"
-                      >
-                        <button
-                          type="button"
-                          class="btn btn-primary w-100"
-                          data-toggle="modal"
-                          data-target="#exampleModalCenter"
-                        >
-                          Edit
-                        </button>
-                        <br />
-                        <button type="button" class="btn btn-danger w-100 mt-2">
-                          Delete
-                        </button>
-                      </div>
+                          In Progress
+                        </option>
+                        <option value="failed" title="Payment attempt failed">
+                          Failed
+                        </option>
+                      </select>
                     </td>
                   </tr>
                 </tbody>
@@ -333,12 +200,9 @@
                     <th>Name</th>
                     <th>Position</th>
                     <th>Department</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Age</th>
-                    <th>Start date</th>
+                    <th>Payment due date</th>
                     <th>Salary</th>
-                    <th>Actions</th>
+                    <th>Status</th>
                   </tr>
                 </tfoot>
               </table>
@@ -347,14 +211,22 @@
             <!-- end of table -->
             <!-- add new employee -->
             <div class="add_opt w-100 d-flex justify-content-end mt-5">
-              <button
-                type="button"
-                class="btn add_btn text-white"
-                data-toggle="modal"
-                data-target="#addNewEmployee"
-              >
-                <i class="fa-solid fa-plus"></i> New Employee
-              </button>
+              <section class="d-flex align-items-center gap-3">
+                <button
+                  type="button"
+                  class="btn btn-danger text-white d-flex align-items-center gap-1"
+                >
+                  <i class="fa-solid fa-trash"></i>Delete
+                </button>
+                <button
+                  type="button"
+                  class="btn add_btn text-white d-flex align-items-center gap-2"
+                  data-toggle="modal"
+                  data-target="#addNewEmployee"
+                >
+                  <i class="fa-solid fa-download"></i>Download
+                </button>
+              </section>
             </div>
             <!-- end of add new employee -->
           </section>
@@ -618,14 +490,16 @@
                       role="tabpanel"
                       aria-labelledby="profile-tab"
                     >
-                      <form
-                        action="/file-upload"
-                        class="mt-4"
-                      >
+                      <form action="/file-upload" class="mt-4">
                         <input type="file" name="file" />
 
                         <div class="form-group mt-4">
-                          <button type="submit" class="btn btn-gradient text-white">Submit</button>
+                          <button
+                            type="submit"
+                            class="btn btn-gradient text-white"
+                          >
+                            Submit
+                          </button>
                         </div>
                       </form>
                     </div>
@@ -671,14 +545,10 @@
       referrerpolicy="no-referrer"
     ></script>
 
-
-
     <script>
       new DataTable("#example", {
         scrollX: true,
       });
-
-      
     </script>
   </body>
 </html>

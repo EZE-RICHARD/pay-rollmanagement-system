@@ -2,7 +2,7 @@
 
 .dash_Box {
   width: 100%;
-  height: fit-content;
+  height: 100%;
   background-color: $pale_blue;
   @include laptop {
     display: grid;
@@ -76,10 +76,17 @@
     .data_section {
       .chart {
         width: 100%;
+        @include laptop {
+          width: 60%;
+        }
       }
 
       .transacrion_history {
+        height: fit-content;
         width: 100%;
+        @include laptop {
+          width: 40%;
+        }
         .histories {
           .transaction {
             span {
@@ -150,4 +157,8 @@
     }
   }
 
+}
+
+.btn-danger{
+  background: red;
 }

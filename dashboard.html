@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./dist/styles/main.css" />
-    <script src="./dist/script/script.js" defer ></script>
+    <script src="./dist/script/script.js" defer></script>
     <title>DashBoard</title>
   </head>
   <body>
@@ -38,12 +38,12 @@
             >
             <a
               href="./dash-employee.html"
-              class="menu_item  text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
               ><i class="fa-solid fa-briefcase p-2 text-dark rounded shadow"></i
               >Employees</a
             >
             <a
-              href="javascript:void(0)"
+              href="./dash-payroll.html"
               class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
               ><i class="fa-solid fa-receipt p-2 text-dark rounded shadow"></i
               >Pay-roll</a
@@ -131,13 +131,15 @@
             class="data_section mt-5 d-lg-flex justify-content-between gap-4"
           >
             <!-- chart -->
-            <div class="chart bg-white p-3 rounded mx-auto shadow">
-              <canvas id="myChart"></canvas>
+            <div class="chart bg-white p-3 rounded shadow">
+              <header class="h5">Employee Earnings</header>
+              <canvas id="myChart" class="mt-5"></canvas>
             </div>
 
             <!-- transaction histories log-->
-            <div class="transacrion_history bg-white rounded p-3 mt-4 mt-lg-0 shadow">
-
+            <div
+              class="transacrion_history bg-white rounded p-3 mt-4 mt-lg-0 shadow"
+            >
               <header class="d-flex justify-content-between">
                 <p>Transaction history</p>
                 <a href="">See all</a>
@@ -220,11 +222,47 @@
                   </div>
                 </div>
 
-              </div>
+                <!-- transaction history  -->
+                <div class="transaction d-flex justify-content-between p-2">
+                  <span class="d-flex gap-2">
+                    <figure>
+                      <img src="./dist/images/many.jpg" alt="" />
+                    </figure>
+                    <div class="employee_info d-flex flex-column">
+                      <span class="employee_name fw-bold">Idogwo Austin</span>
+                      <span>Intern</span>
+                    </div>
+                  </span>
 
+                  <div class="amount d-flex flex-column">
+                    <span>&#8358;5000</span>
+                    <span>2/02/24</span>
+                  </div>
+                </div>
+
+                <!-- transaction history  -->
+                <div class="transaction d-flex justify-content-between p-2">
+                  <span class="d-flex gap-2">
+                    <figure>
+                      <img src="./dist/images/many.jpg" alt="" />
+                    </figure>
+                    <div class="employee_info d-flex flex-column">
+                      <span class="employee_name fw-bold">Idogwo Austin</span>
+                      <span>Intern</span>
+                    </div>
+                  </span>
+
+                  <div class="amount d-flex flex-column">
+                    <span>&#8358;5000</span>
+                    <span>2/02/24</span>
+                  </div>
+                </div>
+
+
+
+              </div>
             </div>
           </section>
-
         </main>
       </section>
     </div>
@@ -237,17 +275,17 @@
       new Chart(ctx, {
         type: "doughnut",
         data: {
-          labels: ["Red", "Blue", "Yellow"],
+          labels: [">₦50,000", "> ₦120,000", "> ₦320,000"],
           datasets: [
             {
-              label: "My First Dataset",
+              label: "Employee's earnings",
               data: [300, 50, 100],
               backgroundColor: [
-                "rgb(255, 99, 132)",
+                "rgb(242, 38, 19)",
                 "rgb(54, 162, 235)",
-                "rgb(255, 205, 86)",
+                "rgb(46, 204, 113)",
               ],
-              hoverOffset: 4,
+              hoverOffset: 7,
             },
           ],
         },

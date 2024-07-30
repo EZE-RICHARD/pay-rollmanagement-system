@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 body {
   font-family: "Space Grotesk", sans-serif;
+  background-color: #F8F9FA;
 }
 
 .dash_Box {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   background-color: #F8F9FA;
 }
 @media (min-width: 850px) {
@@ -80,8 +80,20 @@ body {
 .dash_Box .main .data_section .chart {
   width: 100%;
 }
+@media (min-width: 850px) {
+  .dash_Box .main .data_section .chart {
+    width: 60%;
+  }
+}
 .dash_Box .main .data_section .transacrion_history {
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
+}
+@media (min-width: 850px) {
+  .dash_Box .main .data_section .transacrion_history {
+    width: 40%;
+  }
 }
 .dash_Box .main .data_section .transacrion_history .histories .transaction span img {
   width: 50px;
@@ -146,4 +158,8 @@ body {
 .menu_item:hover i {
   background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
   color: white !important;
+}
+
+.btn-danger {
+  background: red;
 }/*# sourceMappingURL=dash-home.css.map */
