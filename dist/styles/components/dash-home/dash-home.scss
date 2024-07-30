@@ -26,7 +26,11 @@
       padding: 1rem;
       background-color: #fff;
       position: fixed;
+      z-index: 2;
       transition: transform 0.3s ease-in-out;
+      @include tablet{
+        width: 40%;
+      }
       @include laptop {
         height: 100%;
         width: 23%;

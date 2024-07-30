@@ -142,7 +142,13 @@ body {
   padding: 1rem;
   background-color: #fff;
   position: fixed;
+  z-index: 2;
   transition: transform 0.3s ease-in-out;
+}
+@media (min-width: 520px) {
+  .dash_Box .side_menu .aside {
+    width: 40%;
+  }
 }
 @media (min-width: 850px) {
   .dash_Box .side_menu .aside {
@@ -249,4 +255,23 @@ body {
 .menu_item:hover i {
   background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
   color: white !important;
+}
+
+div.dt-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.data_table .add_btn {
+  background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
+}
+
+.atn-btn {
+  background-color: #018B03;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
 }/*# sourceMappingURL=main.css.map */
