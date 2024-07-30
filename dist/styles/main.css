@@ -291,4 +291,35 @@ div.dt-container {
 .btn-gradient {
   background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
   border: 0;
+}
+
+.btn_sizer {
+  width: 15%;
+}
+
+.hero-sign {
+  background-color: #F8F9FA;
+  width: 100%;
+  height: 100dvh;
+  padding: 3rem 1rem 0;
+}
+@media (min-width: 850px) {
+  .hero-sign {
+    padding: 4rem;
+  }
+}
+.hero-sign .glass {
+  width: 95%;
+  margin: 20% auto 0;
+}
+@media (min-width: 520px) {
+  .hero-sign .glass {
+    width: 80%;
+  }
+}
+@media (min-width: 850px) {
+  .hero-sign .glass {
+    margin: 5% auto 0;
+    width: 40%;
+  }
 }/*# sourceMappingURL=main.css.map */

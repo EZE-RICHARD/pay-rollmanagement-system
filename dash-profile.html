@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.2/css/dataTables.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="./dist/styles/main.css" />
+    <script src="./dist/script/script.js" defer></script>
+    <title>DashBoard</title>
+  </head>
+  <body>
+    <div class="dash_Box">
+      <i class="fa-solid fa-list toggle_btn text-white p-3 h3 shadow"></i>
+
+      <!-- side menu -->
+      <section class="side_menu">
+        <div class="aside shadow toggle_side">
+          <header class="brand h3">EasyPay</header>
+          <nav class="nav_menu mt-4">
+            <a
+              href="./dashboard.html"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              ><i class="fa-solid fa-house p-2 text-dark rounded shadow"></i
+              >Dashboard</a
+            >
+            <a
+              href="./dash-employee.html"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              ><i class="fa-solid fa-briefcase p-2 text-dark rounded shadow"></i
+              >Employees</a
+            >
+            <a
+              href="./dash-payroll.html"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              ><i class="fa-solid fa-receipt p-2 text-dark rounded shadow"></i
+              >Pay-roll</a
+            >
+            <span>Accounts</span>
+            <a
+              href="javscript:void(0)"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded active_nav"
+              ><i class="fa-solid fa-user p-2 text-white rounded shadow"></i
+              >Profile</a
+            >
+            <a
+              href="javscript:void(0)"
+              class="menu_item text-decoration-none text-dark d-flex align-items-center gap-2 p-3 rounded"
+              ><i
+                class="fa-solid fa-right-to-bracket p-2 text-dark rounded shadow"
+              ></i
+              >Sign in</a
+            >
+          </nav>
+          <footer class="foot">
+            <a href="" class="btn log_btn text-decoration-none text-white"
+              >Log out</a
+            >
+          </footer>
+        </div>
+      </section>
+
+      <!-- main section -->
+      <section class="main p-3 p-md-4">
+        <main>
+          <header
+            class="head_nav d-md-flex justify-content-between align-items-center"
+          >
+            <a href="javascript:void(0)" class="text-decoration-none text-dark"
+              >/ Profile</a
+            >
+            <div class="d-flex align-items-center gap-3">
+              <input
+                type="search"
+                name="search"
+                id="dearch"
+                placeholder="Search..."
+                class="form-control"
+              />
+              <a href="" class="text-decoration-none text-dark"
+                ><i class="fa-solid fa-user"></i
+              ></a>
+            </div>
+          </header>
+
+          <div class="update_section d-lg-flex w-100 justify-content-between gap-3 mt-4">
+
+
+            <!-- update profile -->
+            <div class="profile_update w-100 bg-white p-3 rounded shadow">
+              <form action="">
+                <section>
+                  <h4>Update Profile</h4>
+                </section>
+                <div class="form-group d-flex gap-2 justify-content-between mt-3">
+                  <input
+                    type="text"
+                    name="first_name"
+                    placeholder="First name"
+                    class="form-control"
+                  />
+                  <input
+                    type="text"
+                    name="last_name"
+                    placeholder="Last name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group mt-3">
+                  <input
+                    type="email"
+                    placeholder="email"
+                    class="form-control"
+                  />
+                  <input type="file" class="mt-3 form-control">
+                </div>
+                <div class="form-group w-100 mt-3 d-flex justify-content-end">
+                  <button class="btn log_btn text-white btn_sizer">Save</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- update password -->
+            <div class="password_update w-100 bg-white p-3 rounded shadow mt-4 mt-lg-0">
+              <form action="">
+                <section>
+                  <h4>Change Password</h4>
+                </section>
+                <div class="form-group mt-3">
+                  <input
+                    type="password"
+                    name="initial_pwd"
+                    placeholder="Old Pssword"
+                    class="form-control"
+                  />
+                  <input
+                    type="password"
+                    name="new_pwd"
+                    placeholder="New Password"
+                    class="form-control mt-3"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    placeholder="confirm password"
+                    class="form-control mt-3"
+                  />
+                </div>
+                <div class="form-group w-100 mt-3 d-flex justify-content-end">
+                  <button class="btn log_btn text-white btn_sizer">Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.1.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.2/js/dataTables.bootstrap5.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.2/css/dataTables.bootstrap5.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      new DataTable("#example", {
+        scrollX: true,
+      });
+    </script>
+  </body>
+</html>

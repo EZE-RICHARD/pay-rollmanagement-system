@@ -21,7 +21,7 @@ $border-rad:0.5rem;
     }
 }
 
-@mixin dessktop{
+@mixin lg-screen{
     @media (min-width: $xlarge) {
         @content;
     }
