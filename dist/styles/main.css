@@ -186,12 +186,25 @@ body {
 .dash_Box .main .summary_info .informations i {
   background-image: linear-gradient(to right top, #000000, #020509, #06111b, #0b1d2f, #2768ab);
 }
-.dash_Box .main .data_section .chart {
+.dash_Box .main .data_section .chart_cont {
   width: 100%;
 }
 @media (min-width: 850px) {
+  .dash_Box .main .data_section .chart_cont {
+    width: 60%;
+  }
+}
+.dash_Box .main .data_section .chart {
+  width: 100%;
+}
+@media (min-width: 520px) {
   .dash_Box .main .data_section .chart {
     width: 60%;
+  }
+}
+@media (min-width: 850px) {
+  .dash_Box .main .data_section .chart {
+    width: 70%;
   }
 }
 .dash_Box .main .data_section .transacrion_history {
